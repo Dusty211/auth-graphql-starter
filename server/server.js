@@ -13,7 +13,9 @@ const app = express();
 
 // Replace with your mongoLab URI
 const pwd = require('../password.js');
-const MONGO_URI = `mongodb+srv://admin:${pwd}@supercluster2-tvijs.mongodb.net/test?retryWrites=true&w=majority`;
+// const MONGO_URI = `mongodb+srv://admin:${pwd}@supercluster2-tvijs.mongodb.net/test?retryWrites=true&w=majority`;
+// const MONGO_URI = `mongodb+srv://admin5:${pwd}@cluster5-hhhoa.mongodb.net/test?retryWrites=true&w=majority`;
+const MONGO_URI = `mongodb://admin5:${pwd}@cluster5-shard-00-00-hhhoa.mongodb.net:27017,cluster5-shard-00-01-hhhoa.mongodb.net:27017,cluster5-shard-00-02-hhhoa.mongodb.net:27017/test?ssl=true&replicaSet=cluster5-shard-0&authSource=admin&retryWrites=true&w=majority`;
 
 // Mongoose's built in promise library is deprecated, replace it with ES2015 Promise
 mongoose.Promise = global.Promise;
